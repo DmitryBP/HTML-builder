@@ -7,5 +7,5 @@ const readStrim = fs.createReadStream(
 );
 let data = '';
 readStrim.on('data', (chunk) => (data += chunk));
-readStrim.on('end', () => console.log('End', data));
-readStrim.on('error', (err) => console.log('Error', err.message));
+readStrim.on('end', () => console.log(data));
+readStrim.on('error', (err) => console.log('Error: ', err.message));
