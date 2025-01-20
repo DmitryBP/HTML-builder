@@ -9,7 +9,6 @@ fs.mkdir(path.join(__dirname, 'files-copy'), { recursive: true }, (err) => {
 });
 
 fs.readdir(path.join(__dirname, 'files'), (err, files) => {
-  console.log(files);
   files.forEach((file) => {
     const sorseFilPath = path.join(__dirname, 'files', file);
     const copiedFilePath = path.join(__dirname, 'files-copy', file);
